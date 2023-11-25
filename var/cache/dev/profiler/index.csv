@@ -99,3 +99,17 @@ afba1d,::1,GET,http://pogodynka.localhost:49226/login,1700920690,,200
 e24896,::1,POST,http://pogodynka.localhost:49226/login,1700920699,,302
 a4a2b8,::1,GET,http://pogodynka.localhost:49226/city,1700920700,,301
 518f23,::1,GET,http://pogodynka.localhost:49226/city/,1700920701,,200
+13b6f1,::1,GET,http://pogodynka.localhost:49226/login,1700926314,,200
+c86609,::1,GET,http://pogodynka.localhost:49226/weahter/PL/Szczecin,1700926324,630153,404
+630153,::1,GET,http://pogodynka.localhost:49226/weahter/PL/Szczecin,1700926325,,404
+eab4e9,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700926343,,200
+0b5f10,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700926729,e3a6d2,500
+e3a6d2,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700926729,,500
+ac99f7,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700926846,7ea7f7,500
+7ea7f7,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700926847,,500
+b65285,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700927041,6314e3,500
+6314e3,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700927042,,500
+54af65,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700927168,563b26,500
+563b26,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700927168,,500
+667161,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700927394,,200
+b4ce09,::1,GET,http://pogodynka.localhost:49226/weather/PL/Szczecin,1700928590,,200

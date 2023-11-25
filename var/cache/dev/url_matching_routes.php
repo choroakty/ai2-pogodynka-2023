@@ -48,7 +48,7 @@ return [
                     .'|/edit(*:250)'
                     .'|(*:258)'
                 .')'
-                .'|/weather/([^/]++)(*:284)'
+                .'|/weather/([^/]++)/([^/]++)(*:293)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -65,8 +65,8 @@ return [
         237 => [[['_route' => 'app_forecast_show', '_controller' => 'App\\Controller\\ForecastController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         250 => [[['_route' => 'app_forecast_edit', '_controller' => 'App\\Controller\\ForecastController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         258 => [[['_route' => 'app_forecast_delete', '_controller' => 'App\\Controller\\ForecastController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        284 => [
-            [['_route' => 'app_weather', '_controller' => 'App\\Controller\\WeatherController::city'], ['name'], null, null, false, true, null],
+        293 => [
+            [['_route' => 'app_weather', '_controller' => 'App\\Controller\\WeatherController::city'], ['countryCode', 'name'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
