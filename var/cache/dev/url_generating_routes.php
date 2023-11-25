@@ -27,6 +27,7 @@ return [
     'app_forecast_edit' => [['id'], ['_controller' => 'App\\Controller\\ForecastController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/forecast']], [], [], []],
     'app_forecast_delete' => [['id'], ['_controller' => 'App\\Controller\\ForecastController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/forecast']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
+    'app_weather_api' => [[], ['_controller' => 'App\\Controller\\WeatherApiController::index'], [], [['text', '/api/v1/weather']], [], [], []],
     'app_weather' => [['countryCode', 'name'], ['_controller' => 'App\\Controller\\WeatherController::city'], ['id' => '\\d+'], [['variable', '/', '[^/]++', 'name', true], ['variable', '/', '[^/]++', 'countryCode', true], ['text', '/weather']], [], [], []],
     'app_logout' => [[], [], [], [['text', '/logout']], [], [], []],
 ];
