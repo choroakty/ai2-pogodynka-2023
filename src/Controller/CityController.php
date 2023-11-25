@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CityController extends AbstractController
 {
     #[Route('/', name: 'app_city_index', methods: ['GET'])]
+    #[IsGranted('ROLE_CITY_INDEX')]
     public function index(CityRepository $cityRepository): Response
     {
         return $this->render('city/index.html.twig', [
@@ -23,6 +24,7 @@ class CityController extends AbstractController
     }
 
     #[Route('/new', name: 'app_city_new', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_CITY_NEW')]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $city = new City();
@@ -45,6 +47,7 @@ class CityController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_city_show', methods: ['GET'])]
+    #[IsGranted('ROLE_CITY_SHOW')]
     public function show(City $city): Response
     {
         return $this->render('city/show.html.twig', [
@@ -53,6 +56,7 @@ class CityController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_city_edit', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_CITY_EDIT')]
     public function edit(Request $request, City $city, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(CityType::class, $city);
@@ -71,6 +75,7 @@ class CityController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_city_delete', methods: ['POST'])]
+    #[IsGranted('ROLE_CITY_DELETE')]
     public function delete(Request $request, City $city, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$city->getId(), $request->request->get('_token'))) {

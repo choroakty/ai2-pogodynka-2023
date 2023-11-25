@@ -25,8 +25,12 @@
                 <td>{{ city.latitude }}</td>
                 <td>{{ city.longitude }}</td>
                 <td>
-                    <a class="btn btn-primary" href="{{ path('app_city_show', {'id': city.id}) }}">Show</a>
-                    <a class="btn btn-secondary" href="{{ path('app_city_edit', {'id': city.id}) }}">Edit</a>
+                    {% if is_granted('ROLE_CITY_SHOW') %}
+                        <a class="btn btn-primary" href="{{ path('app_city_show', {'id': city.id}) }}">Show</a>
+                    {% endif %}
+                    {% if is_granted('ROLE_CITY_EDIT') %}
+                        <a class="btn btn-secondary" href="{{ path('app_city_edit', {'id': city.id}) }}">Edit</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -36,6 +40,7 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a class="btn btn-success btn-lg" href="{{ path('app_city_new') }}">Create new</a>
+    {% if is_granted('ROLE_CITY_NEW') %}
+        <a class="btn btn-success btn-lg" href="{{ path('app_city_new') }}">Create new</a>
+    {% endif %}
 {% endblock %}
